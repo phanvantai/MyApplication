@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!-- Strings related to login -->
+    <string name="login">Login</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="show_list">Show List</string>
+    <string name="tv_all">All</string>
+    <string name="add_model">Add new model</string>
+    <string name="del_model">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="add_model_layout">Add</string>
+    <string name="model_name">Edit name</string>
+    <string name="model_manufactory">Edit manufactory</string>
+    <string name="model_display">Edit display</string>
+    <string name="model_ramrom">Edit RAM/ROM</string>
+    <string name="model_camera">Edit Camera</string>
+
+    <string name="register">Register</string>
+
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_password_not_match">Password not match</string>
+    <string name="login_error">Invalid login</string>
+
+    <string name="login_success">Hi, {0}. You login with password is {1}.</string>
+    <string name="show_contacts">Show Contacts</string>
+
+</resources>

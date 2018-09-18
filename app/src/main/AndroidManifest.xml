@@ -24,6 +24,13 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ListActivity" />
         <activity android:name=".DetailsActivity" />
+
+        <provider
+            android:name=".ModelProvider"
+            android:authorities="com.example.luckyluke.myapplication.CONTENT_PROVIDER"
+            android:enabled="true"
+            android:exported="true"></provider>
+
     </application>
 
 </manifest>

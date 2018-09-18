@@ -13,7 +13,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "my_databases";
 
-    private static final String TABLE_MODELS = "models";
+    public static final String TABLE_MODELS = "models";
     public static final String ID = "id";
     private static final String NAME = "name";
     private static final String FACTORY = "factory";
@@ -28,13 +28,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
                     DISPLAY + " TEXT," +
                     RAMROM + " TEXT," +
                     CAMERA + " TEXT)";
-    public static final String TABLE_CONTACTS = "contacts";
-    private static final String PHONE_NUMBER = "phone_number";
-    private static final String CREATE_TABLE_CONTACTS =
-            "CREATE TABLE " + TABLE_CONTACTS + " (" +
-                    ID + " integer primary key Autoincrement, " +
-                    NAME + " TEXT, " +
-                    PHONE_NUMBER + " TEXT)";
 
     private Context mContext;
     private static DatabaseManager mInstance;
@@ -54,11 +47,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-        // create model table
         sqLiteDatabase.execSQL(CREATE_TABLE_MODELS);
-
-        // create contact table
-        sqLiteDatabase.execSQL(CREATE_TABLE_CONTACTS);
 
         Toast.makeText(mContext, "Create successfully", Toast.LENGTH_SHORT).show();
     }
@@ -66,7 +55,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_MODELS);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS);
         onCreate(sqLiteDatabase);
         Toast.makeText(mContext, "Drop successfully", Toast.LENGTH_SHORT).show();
     }

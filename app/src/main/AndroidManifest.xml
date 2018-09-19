@@ -4,7 +4,9 @@
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission android:name="com.example.luckyluke.myapplication.DATA"
+        android:protectionLevel="signature" />
 
     <application
         android:allowBackup="true"
@@ -27,9 +29,10 @@
 
         <provider
             android:name=".ModelProvider"
+            android:permission="com.example.luckyluke.myapplication.DATA"
             android:authorities="com.example.luckyluke.myapplication.CONTENT_PROVIDER"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
     </application>
 

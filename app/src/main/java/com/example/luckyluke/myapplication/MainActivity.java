@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mHelloText = completeText(mHelloText, new String[]{mUserName, mPassword});
         tvWelcome.setText(mHelloText);
 
+        // register a receiver
         mReceiver = new StringReceiver();
         IntentFilter mFilter = new IntentFilter(ACTION_SEND);
         registerReceiver(mReceiver, mFilter);

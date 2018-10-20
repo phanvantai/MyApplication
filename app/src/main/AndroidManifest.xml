@@ -4,6 +4,7 @@
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.example.luckyluke.contentprovider.Broadcast" />
 
     <permission android:name="com.example.luckyluke.myapplication.DATA"
         android:protectionLevel="signature" />

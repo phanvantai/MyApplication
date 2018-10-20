@@ -12,6 +12,7 @@ public class StringReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Bundle mBundle = intent.getExtras();
         String mString = mBundle.getString("test");
-        Toast.makeText(context, "OK!! " + mString, Toast.LENGTH_LONG).show();
+        Toast.makeText(context,
+                "OK!! This is my application. " + mString, Toast.LENGTH_LONG).show();
     }
 }
